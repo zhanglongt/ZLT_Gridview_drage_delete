@@ -1,10 +1,12 @@
 package yfw.com.zlt_gridview_drage_delete;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,10 +21,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private DraggableGridView gv;
     private GridViewAdapter gridViewAdapter;
     private boolean isShowDelete;//是否显示删除按钮
+    private Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btn= (Button) findViewById(R.id.btn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Main2Activity.class));
+            }
+        });
         gv = (DraggableGridView) findViewById(R.id.gv);
         gridViewAdapter=new GridViewAdapter(this,getGrayData());
         gv.setAdapter(gridViewAdapter);

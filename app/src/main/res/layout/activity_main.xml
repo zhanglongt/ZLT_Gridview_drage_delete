@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="yfw.com.zlt_gridview_drage_delete.MainActivity">
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+   <Button
+       android:id="@+id/btn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="点击添加，再点击删除"/>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#606063"></View>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <view_drage_detel.DraggableGridView
+        android:layout_marginTop="10dp"
         android:id="@+id/gv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:numColumns="4"
         android:verticalSpacing="2dp" />
-</RelativeLayout>
+    </ScrollView>
+</LinearLayout>
