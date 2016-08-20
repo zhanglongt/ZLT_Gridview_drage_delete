@@ -16,8 +16,6 @@ import yfw.com.zlt_gridview_drage_delete.R;
 
 
 public class GridViewAdapter extends BaseAdapter {
-    private String names[];
-    private int icons[];
     private List<HashMap<String, Object>> myList;//List<HashMap<String, Object>> list
     private Context mContext;
     private TextView name_tv;
@@ -35,7 +33,6 @@ public class GridViewAdapter extends BaseAdapter {
 
     public GridViewAdapter(Context mContext, List<HashMap<String, Object>> myList) {
         this.mContext = mContext;
-//  this.names=names;
         this.myList = myList;
     }
 
