@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="yfw.com.zlt_gridview_drage_delete.Main2Activity">
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="哈哈："/>
+    <view_myGridview.MyGridview
+        android:layout_marginTop="10dp"
+        android:id="@+id/gvl"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:numColumns="4"></view_myGridview.MyGridview>
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/ll"
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#606063"></View>
+    <ScrollView
+        android:layout_below="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+    <view_myGridview.MyGridview
+        android:layout_marginTop="10dp"
+        android:id="@+id/gvz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:verticalSpacing="2dp"  ></view_myGridview.MyGridview>
+    </ScrollView>
+</RelativeLayout>
